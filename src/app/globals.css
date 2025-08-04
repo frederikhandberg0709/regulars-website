@@ -2,7 +2,7 @@
 
 :root {
   --background: #faf9f6;
-  --foreground: #171717;
+  --foreground: #0f0f0f;
 }
 
 @theme inline {
@@ -27,6 +27,7 @@ body {
   font-weight: 500;
   color: #0f0f0f;
   transition: all ease-in-out 150ms;
+  text-align: center;
 }
 
 .nav-link:hover {
@@ -93,4 +94,9 @@ body {
 
 .button-transition {
   transition: all ease-in-out 150ms;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 800;
 }
