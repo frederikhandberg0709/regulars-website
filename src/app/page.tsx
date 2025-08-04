@@ -56,6 +56,19 @@ export default function Home() {
                 BOOK A DEMO
               </Link>
             </div>
+
+            {/* Mobile menu */}
+            <button className="md:hidden flex items-center justify-center p-2 size-10 cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 14"
+                fill="none"
+              >
+                <rect y="6" width="16" height="2" fill="#0F0F0F" />
+                <rect width="16" height="2" fill="#0F0F0F" />
+                <rect y="12" width="16" height="2" fill="#0F0F0F" />
+              </svg>
+            </button>
           </div>
           <div className="mx-auto bg-[#0F0F0F] h-[1px] w-full"></div>
         </div>

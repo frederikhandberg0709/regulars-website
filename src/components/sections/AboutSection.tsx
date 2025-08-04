@@ -33,7 +33,7 @@ export default function AboutSection() {
           SCHEDULE LOYALTY STRATEGY SESSION
         </Link>
 
-        <div className="flex flex-col xl:flex-row gap-10 mt-13">
+        <div className="flex flex-col self-center xl:flex-row max-xl:gap-13 gap-10 mt-13">
           <div className="space-y-5">
             <h2 className="text-center text-3xl font-bold">1. Define</h2>
             <p className="text-center">
