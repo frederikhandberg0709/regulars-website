@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #faf9f6;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
+  font-family: var(--font-poppins), sans-serif;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #0f0f0f;
+  transition: all ease-in-out 150ms;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1453.86px);
+  }
+}
+
+.trusted-brands-logos {
+  overflow: hidden;
+  position: relative;
+  height: 25px;
+}
+
+.trusted-brands-logos:before,
+.trusted-brands-logos:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 2;
+}
+
+.trusted-brands-logos:before {
+  left: 0;
+  background: linear-gradient(to right, #faf9f6, transparent);
+}
+
+.trusted-brands-logos:after {
+  right: 0;
+  background: linear-gradient(to left, #faf9f6, transparent);
+}
+
+.trusted-brands-logos:hover .trusted-brands-logos-slider {
+  animation-play-state: paused;
+}
+
+.trusted-brands-logos-slider {
+  display: flex;
+  animation: 70s slideLeft infinite linear;
+  height: 100%;
+  width: fit-content;
+}
+
+.logo-container {
+  display: flex;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.logo-container img {
+  height: 100%;
+  margin: 0 40px;
+  width: auto;
+}
+
+.button-transition {
+  transition: all ease-in-out 150ms;
 }

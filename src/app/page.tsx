@@ -1,103 +1,134 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const logos = [
+    { src: "/april-coffee-logo.png", alt: "April Coffee Logo", invert: true },
+    {
+      src: "/kontra-coffee-logo.png",
+      alt: "Kontra Coffee Logo",
+      invert: false,
+    },
+    { src: "/manda-logo.png", alt: "Manda Logo", invert: true },
+    { src: "/orsa-logo.png", alt: "ORSA Logo", invert: false },
+    { src: "/carter-logo.png", alt: "CARTER Logo", invert: false },
+    { src: "/sp-coffee-logo.png", alt: "SP Coffee Logo", invert: false },
+    { src: "/sidewalk-logo.png", alt: "Sidewalk Logo", invert: false },
+    {
+      src: "/lige-om-hjoernet-logo.png",
+      alt: "Lige om Hjørnet Logo",
+      invert: false,
+    },
+    { src: "/ziggy-logo.png", alt: "Ziggy Logo", invert: false },
+    { src: "/echo-logo.png", alt: "Echo Logo", invert: true },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <>
+      <nav className="flex items-center justify-center bg-white w-full">
+        <div className="flex items-center justify-between w-4xl mt-7">
+          <button className="cursor-pointer scale-100 hover:scale-105 w-[144px] h-auto active:scale-95 transition duration-200">
+            <img src="/regulars-logo.png" alt="Regulars Logo" />
+          </button>
+
+          <div className="flex items-center gap-7">
+            <Link href="/about" className="nav-link">
+              About
+            </Link>
+            <Link href="/cases" className="nav-link">
+              Cases
+            </Link>
+            <Link href="/pricing" className="nav-link">
+              Pricing
+            </Link>
+            <Link href="/FAQ" className="nav-link">
+              FAQ
+            </Link>
+
+            <Link
+              href="#"
+              className="font-bold text-white bg-[#0F0F0F] px-5 h-[45px] flex items-center justify-center rounded-xl scale-100 hover:scale-105 active:scale-95 button-transition"
+            >
+              BOOK A DEMO
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </nav>
+      <header>
+        <div className="flex flex-col justify-center">
+          <div className="w-3xl self-center">
+            <div className="flex">
+              <div className="flex flex-col gap-6">
+                <h1 className="font-black text-5xl leading-tight">
+                  More members.
+                  <br />
+                  More visits.
+                  <br />
+                  More revenue.
+                </h1>
+
+                <p>
+                  Turn one-time visitors into regulars with personal memberships
+                  in Apple & Google Wallet.
+                </p>
+
+                <div className="flex gap-3">
+                  <Link
+                    href="#"
+                    className="font-bold text-white bg-[#0F0F0F] scale-100 hover:scale-105 active:scale-95 px-5 h-[45px] button-transition flex items-center justify-center rounded-full"
+                  >
+                    BOOK A DEMO
+                  </Link>
+                  <Link
+                    href="#"
+                    className="font-bold border-2 scale-100 hover:scale-105 active:scale-95 button-transition hover:bg-[#0F0F0F] hover:text-white border-[#0F0F0F] px-5 h-[45px] flex items-center justify-center rounded-full"
+                  >
+                    LEARN MORE
+                  </Link>
+                </div>
+
+                <div>
+                  <p>Loved by more than 100.000 regulars</p>
+                </div>
+              </div>
+
+              <img
+                src="/header-phone.png"
+                alt="Mobile phone"
+                className="w-[322px]"
+              />
+            </div>
+
+            <p className="font-bold mt-20">Trusted By Leading Cafés</p>
+          </div>
+          <div className="trusted-brands-logos mt-5">
+            <div className="trusted-brands-logos-slider">
+              <div className="logo-container">
+                {logos.map((logo, index) => (
+                  <img
+                    key={`first-${index}`}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className={`w-auto h-full ${logo.invert ? "invert" : ""}`}
+                  />
+                ))}
+              </div>
+
+              <div className="logo-container">
+                {logos.map((logo, index) => (
+                  <img
+                    key={`second-${index}`}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className={`w-auto h-full ${logo.invert ? "invert" : ""}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }
