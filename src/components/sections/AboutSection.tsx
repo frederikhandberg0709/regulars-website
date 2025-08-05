@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function AboutSection() {
   return (
     <section className="flex justify-center">
-      <div className="flex flex-col items-start w-4xl mx-5 md:w-2xl xl:w-4xl">
+      <div className="flex flex-col items-start w-full mx-5 md:w-2xl xl:w-4xl">
         <h1 className="section-title">About</h1>
 
         <p className="text-xl mt-5 mb-10">
@@ -16,14 +16,18 @@ export default function AboutSection() {
           experiences. Ready to fix loyalty for your business?
         </p>
 
-        <div className="flex items-center gap-6 text-xl">
+        <div className="flex items-center gap-6">
           <img
             src="Hans-Christian-Angel.jpeg"
             alt=""
             className="rounded-full size-16"
           />
-          <p className="font-medium">Hans Christian Angel</p>
-          <p className="font-light">Head of Customer Success</p>
+          <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-5">
+            <p className="font-medium text-xl">Hans Christian Angel</p>
+            <p className="font-light text-lg sm:text-xl">
+              Head of Customer Success
+            </p>
+          </div>
         </div>
 
         <Link
