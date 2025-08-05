@@ -3,6 +3,7 @@
 import Link from "next/link";
 import AboutSection from "../components/sections/AboutSection";
 import CasesSection from "@/components/sections/CasesSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 
 export default function Home() {
   const logos = [
@@ -173,6 +174,12 @@ export default function Home() {
       </div>
 
       <CasesSection />
+
+      <div className="px-5">
+        <div className="mx-auto md:w-2xl xl:w-4xl bg-[#0F0F0F] h-[1px] my-13"></div>
+      </div>
+
+      <TestimonialsSection />
 
       <div className="px-5">
         <div className="mx-auto md:w-2xl xl:w-4xl bg-[#0F0F0F] h-[1px] my-13"></div>
