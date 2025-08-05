@@ -32,7 +32,7 @@ export default function AboutSection() {
 
         <Link
           href="#"
-          className="font-bold mt-10 whitespace-nowrap text-white bg-[#0F0F0F] px-10 h-[55px] flex items-center text-center justify-center rounded-xl scale-100 hover:scale-105 active:scale-95 button-transition"
+          className="font-bold mt-10 sm:whitespace-nowrap text-white bg-[#0F0F0F] px-10 max-sm:py-2.5 sm:h-[55px] flex items-center text-center justify-center rounded-xl scale-100 hover:scale-105 active:scale-95 button-transition"
         >
           SCHEDULE LOYALTY STRATEGY SESSION
         </Link>
