@@ -136,7 +136,7 @@ export default function Home() {
 
             <p className="font-bold mt-20">Trusted By Leading Cafés</p>
           </div>
-          <div className="trusted-brands-logos mt-5">
+          <div className="trusted-brands-logos mt-5 md:w-2xl xl:w-4xl self-center">
             <div className="trusted-brands-logos-slider">
               <div className="logo-container">
                 {logos.map((logo, index) => (
