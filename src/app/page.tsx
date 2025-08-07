@@ -5,6 +5,8 @@ import AboutSection from "../components/sections/AboutSection";
 import CasesSection from "@/components/sections/CasesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FooterSection from "@/components/sections/FooterSection";
+import SlidingLogos from "@/components/sliding-logos";
+import FAQSection from "@/components/FAQSection";
 
 export default function Home() {
   const logos = [
@@ -136,31 +138,7 @@ export default function Home() {
 
             <p className="font-bold mt-20">Trusted By Leading Cafés</p>
           </div>
-          <div className="trusted-brands-logos mt-5 md:w-2xl xl:w-4xl self-center">
-            <div className="trusted-brands-logos-slider">
-              <div className="logo-container">
-                {logos.map((logo, index) => (
-                  <img
-                    key={`first-${index}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className={`w-auto h-full ${logo.invert ? "invert" : ""}`}
-                  />
-                ))}
-              </div>
-
-              <div className="logo-container">
-                {logos.map((logo, index) => (
-                  <img
-                    key={`second-${index}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className={`w-auto h-full ${logo.invert ? "invert" : ""}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          <SlidingLogos logos={logos} />
         </div>
       </header>
 
@@ -181,6 +159,12 @@ export default function Home() {
       </div>
 
       <TestimonialsSection />
+
+      <div className="px-5">
+        <div className="mx-auto md:w-2xl xl:w-4xl bg-[#0F0F0F] h-[1px] my-13"></div>
+      </div>
+
+      <FAQSection />
 
       <div className="px-5">
         <div className="mx-auto md:w-2xl xl:w-4xl bg-[#0F0F0F] h-[1px] my-13"></div>

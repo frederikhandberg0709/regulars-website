@@ -39,7 +39,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1453.86px);
+    transform: translateX(calc(-1 * var(--slider-width)));
   }
 }
 
@@ -75,7 +75,7 @@ body {
 
 .trusted-brands-logos-slider {
   display: flex;
-  animation: 70s slideLeft infinite linear;
+  animation: slideLeft var(--slider-duration, 70s) linear infinite;
   height: 100%;
   width: fit-content;
 }

@@ -1,4 +1,5 @@
 import CasesCard from "../cases-card";
+import SlidingLogos from "../sliding-logos";
 
 export default function CasesSection() {
   const logos = [
@@ -52,32 +53,7 @@ export default function CasesSection() {
           <p className="font-bold">Trusted By Leading Restaurants</p>
         </div>
       </div>
-
-      <div className="trusted-brands-logos mt-5">
-        <div className="trusted-brands-logos-slider">
-          <div className="logo-container">
-            {logos.map((logo, index) => (
-              <img
-                key={`first-${index}`}
-                src={logo.src}
-                alt={logo.alt}
-                className={`w-auto h-full ${logo.invert ? "invert" : ""}`}
-              />
-            ))}
-          </div>
-
-          <div className="logo-container">
-            {logos.map((logo, index) => (
-              <img
-                key={`second-${index}`}
-                src={logo.src}
-                alt={logo.alt}
-                className={`w-auto h-full ${logo.invert ? "invert" : ""}`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <SlidingLogos logos={logos} />
     </section>
   );
 }
