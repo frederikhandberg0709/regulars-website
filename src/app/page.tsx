@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import FooterSection from "@/components/sections/FooterSection";
 import SlidingLogos from "@/components/sliding-logos";
 import FAQSection from "@/components/FAQSection";
+import PricingSection from "@/components/sections/PricingSection";
 
 export default function Home() {
   const logos = [
@@ -62,11 +63,11 @@ export default function Home() {
             </div>
 
             {/* Mobile menu */}
-            <button className="md:hidden flex items-center justify-center p-2 size-10 cursor-pointer">
+            <button className="md:hidden flex items-center justify-center p-2 border-2 rounded-lg size-10 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 14"
-                fill="none"
+                className="size-10"
               >
                 <rect y="6" width="16" height="2" fill="#0F0F0F" />
                 <rect width="16" height="2" fill="#0F0F0F" />
@@ -78,7 +79,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <header className="mt-20">
+      <header className="mt-10 sm:mt-20">
         <div className="flex flex-col justify-center">
           <div className="mx-5 md:w-2xl xl:w-4xl self-center">
             <div className="flex flex-col xl:flex-row items-center justify-center gap-14">
@@ -159,6 +160,12 @@ export default function Home() {
       </div>
 
       <TestimonialsSection />
+
+      <div className="px-5">
+        <div className="mx-auto md:w-2xl xl:w-4xl bg-[#0F0F0F] h-[1px] my-13"></div>
+      </div>
+
+      <PricingSection />
 
       <div className="px-5">
         <div className="mx-auto md:w-2xl xl:w-4xl bg-[#0F0F0F] h-[1px] my-13"></div>

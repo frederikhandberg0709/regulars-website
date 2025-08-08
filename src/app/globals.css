@@ -23,6 +23,28 @@ body {
   color: var(--foreground);
 }
 
+@layer utilities {
+  .stroke-1 {
+    -webkit-text-stroke-width: 1px;
+  }
+  .stroke-1-5 {
+    -webkit-text-stroke-width: 1.5px;
+  }
+  .stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+  .stroke-4 {
+    -webkit-text-stroke-width: 4px;
+  }
+
+  .stroke-black {
+    -webkit-text-stroke-color: black;
+  }
+  .stroke-white {
+    -webkit-text-stroke-color: white;
+  }
+}
+
 .nav-link {
   font-weight: 500;
   color: #0f0f0f;
